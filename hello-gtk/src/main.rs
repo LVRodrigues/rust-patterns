@@ -18,12 +18,12 @@ fn build_ui(app: &Application) {
         .margin_end(12)
         .build();
     button.connect_clicked(|b| {
-        b.set_label("Hello, Luciano");
+        b.set_label("Hello, Luciano!");
     });
     
     let window = ApplicationWindow::builder()
         .application(app)
-        .title("Hello RUST with GTK 4")
+        .title("Hello RUST with GTK 4!")
         .child(&button)
         .width_request(300)
         .build();
