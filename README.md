@@ -4,5 +4,5 @@ Aqui mora o desejo de testes e aprendizado com a linguagem RUST. O objetivo inic
 
 ## hello-gtk
 
-Hello Worl com integraçãom com GTK 4.
+**Hello World!** com integraçãom com GTK 4.
 
