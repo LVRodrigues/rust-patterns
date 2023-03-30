@@ -1,14 +1,56 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created with Cambalache 0.10.3 -->
 <interface>
+  <!-- interface-name window.ui -->
+  <requires lib="gtk" version="4.6"/>
   <template parent="GtkApplicationWindow" class="Window">
+    <property name="default-width">400</property>
+    <property name="show-menubar">True</property>
     <property name="title">Observer</property>
+    <child type="titlebar">
+      <object class="GtkHeaderBar">
+        <child type="end">
+          <object class="GtkMenuButton">
+            <property name="accessible-role">menu-item</property>
+          </object>
+        </child>
+      </object>
+    </child>
     <child>
-      <object class="GtkButton" id="button">
-        <property name="label">Press me!</property>
-        <property name="margin-top">12</property>
-        <property name="margin-bottom">12</property>
-        <property name="margin-start">12</property>
-        <property name="margin-end">12</property>  
+      <object class="GtkCenterBox">
+        <child type="center">
+          <object class="GtkCenterBox">
+            <property name="accessible-role">meter</property>
+            <property name="halign">start</property>
+            <property name="orientation">vertical</property>
+            <child type="end">
+              <object class="GtkLabel" id="currentValue">
+                <property name="label">1</property>
+                <property name="margin-bottom">10</property>
+                <property name="margin-end">10</property>
+                <property name="margin-start">10</property>
+                <property name="margin-top">10</property>
+              </object>
+            </child>
+            <child type="start">
+              <object class="GtkLabel" id="previousValue">
+                <property name="label">0</property>
+                <property name="margin-bottom">10</property>
+                <property name="margin-end">10</property>
+                <property name="margin-start">10</property>
+                <property name="margin-top">10</property>
+              </object>
+            </child>
+            <child type="center">
+              <object class="GtkLabel">
+                <property name="label">Sequência de Fibonacci:</property>
+                <property name="margin-end">10</property>
+                <property name="margin-start">10</property>
+                <property name="max-width-chars">1</property>
+              </object>
+            </child>
+          </object>
+        </child>
       </object>
     </child>
   </template>

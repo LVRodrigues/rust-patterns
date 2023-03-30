@@ -1,13 +1,13 @@
 use glib::subclass::InitializingObject;
 use gtk::prelude::*;
 use gtk::subclass::prelude::*;
-use gtk::{glib, Button, CompositeTemplate};
+use gtk::{glib, Button, Label, CompositeTemplate};
 
 #[derive(CompositeTemplate, Default)]
 #[template(resource = "/io/github/lvrodrigues/window.ui")]
 pub struct Window {
-    #[template_child]
-    pub button: TemplateChild<Button>,
+    // #[template_child]
+    // pub button: TemplateChild<Button>,
 }
 
 #[glib::object_subclass]
@@ -30,9 +30,9 @@ impl ObjectImpl for Window {
     fn constructed(&self) {
         self.parent_constructed();
 
-        self.button.connect_clicked(move |button| {
-            button.set_label("Hello World!");
-        });
+        // self.button.connect_clicked(move |button| {
+        //     button.set_label("Hello World!");
+        // });
     }
 }
 

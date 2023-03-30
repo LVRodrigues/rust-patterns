@@ -1,6 +1,7 @@
 mod window;
 
-use gtk::{glib, Application, gio};
+use adw::Application;
+use gtk::{glib, gio};
 use gtk::prelude::*;
 use window::Window;
 
