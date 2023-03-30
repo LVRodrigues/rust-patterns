@@ -1,3 +1,5 @@
+pub mod window;
+
 pub trait Observer<T> {
     fn receive(&self, value: T);
 }

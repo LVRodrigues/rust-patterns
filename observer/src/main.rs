@@ -1,6 +1,8 @@
+mod window;
 
-use gtk::{glib, Application, gio, Builder, ApplicationWindow};
+use gtk::{glib, Application, gio};
 use gtk::prelude::*;
+use window::Window;
 
 const APP_ID: &str = "io.github.lvrodrigues.Observer";
 
@@ -18,9 +20,7 @@ fn main() -> glib::ExitCode {
 }
 
 fn build_ui(app: &Application) {
-    let builder = Builder::from_resource("/io/github/lvrodrigues/window.ui");
-    let window: ApplicationWindow = builder.object("window").unwrap();
-    window.set_application(Some(app));
-    window.set_visible(true);
+    let window = Window::new(app);
+    window.present();
 }
 
