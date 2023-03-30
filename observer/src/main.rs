@@ -1,8 +1,8 @@
 mod window;
 
+use adw::prelude::*;
 use adw::Application;
 use gtk::{glib, gio};
-use gtk::prelude::*;
 use window::Window;
 
 const APP_ID: &str = "io.github.lvrodrigues.Observer";

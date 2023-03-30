@@ -1,8 +1,27 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!-- Created with Cambalache 0.10.3 -->
 <interface>
-  <!-- interface-name window.ui -->
-  <requires lib="gtk" version="4.6"/>
+  <menu id="main-menu">
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">_Parar</attribute>
+        <attribute name="action">fibonacci.stop</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">_Iniciar</attribute>
+        <attribute name="action">fibonacci.start</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">_Restaurar</attribute>
+        <attribute name="action">fibonacci.restore</attribute>
+      </item>
+    </section>
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">_Sobre</attribute>
+        <attribute name="action">observer.about</attribute>
+      </item>
+    </section>
+  </menu>
   <template parent="GtkApplicationWindow" class="Window">
     <property name="default-width">400</property>
     <property name="show-menubar">True</property>
@@ -11,7 +30,9 @@
       <object class="GtkHeaderBar">
         <child type="end">
           <object class="GtkMenuButton">
-            <property name="accessible-role">menu-item</property>
+            <property name="icon-name">open-menu-symbolic</property>
+            <property name="menu-model">main-menu</property>
+            <property name="tooltip-text" translatable="yes">Main Menu</property>
           </object>
         </child>
       </object>
