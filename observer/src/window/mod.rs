@@ -1,7 +1,7 @@
 mod imp;
 
 use glib::Object;
-use gtk::{gio, glib};
+use gtk::{gio::{self, SimpleAction}, glib, prelude::ActionMapExt};
 use adw::Application;
 
 glib::wrapper! {
@@ -17,6 +17,22 @@ impl Window {
     }
 
     fn setup_actions(&self) {
+        let action_start = SimpleAction::new("start", None);
+        action_start.connect_activate(|action, _| {
+            println!("{} - Start", action.to_string());
+        });
+        self.add_action(&action_start);
 
+        let action_stop = SimpleAction::new("stop", None);
+        action_stop.connect_activate(|action, _| {
+            println!("{} - Stop", action.to_string());
+        });
+        self.add_action(&action_stop);
+
+        let action_restore = SimpleAction::new("restore", None);
+        action_restore.connect_activate(|action, _| {
+            println!("{} - Restore", action.to_string());
+        });
+        self.add_action(&action_restore);
     }
 }

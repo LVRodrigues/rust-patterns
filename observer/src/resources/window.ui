@@ -4,22 +4,22 @@
   <menu id="main-menu">
     <section>
       <item>
-        <attribute name="label" translatable="yes">_Parar</attribute>
-        <attribute name="action">fibonacci.stop</attribute>
+        <attribute name="label" translatable="yes">_Iniciar</attribute>
+        <attribute name="action">win.start</attribute>
       </item>
       <item>
-        <attribute name="label" translatable="yes">_Iniciar</attribute>
-        <attribute name="action">fibonacci.start</attribute>
+        <attribute name="label" translatable="yes">_Parar</attribute>
+        <attribute name="action">win.stop</attribute>
       </item>
       <item>
         <attribute name="label" translatable="yes">_Restaurar</attribute>
-        <attribute name="action">fibonacci.restore</attribute>
+        <attribute name="action">win.restore</attribute>
       </item>
     </section>
     <section>
       <item>
         <attribute name="label" translatable="yes">_Sobre</attribute>
-        <attribute name="action">observer.about</attribute>
+        <attribute name="action">win.about</attribute>
       </item>
     </section>
   </menu>

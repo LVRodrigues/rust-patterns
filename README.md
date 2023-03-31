@@ -6,3 +6,9 @@ Aqui mora o desejo de testes e aprendizado com a linguagem RUST. O objetivo inic
 
 **Hello World!** com integraçãom com GTK 4.
 
+## observer
+
+Modelo de assinatura e notificação de alteração de valores em uma estrutura monitorada. Uso das características **Subject** e **Observer**.
+
+Aproveitando e também brincando com GTK 4.
+
