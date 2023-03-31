@@ -1,3 +1,4 @@
+mod fibonacci;
 mod window;
 
 use adw::prelude::*;

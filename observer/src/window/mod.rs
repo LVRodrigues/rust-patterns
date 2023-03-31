@@ -15,4 +15,8 @@ impl Window {
     pub fn new(app: &Application) -> Self {
         Object::builder().property("application", app).build()
     }
+
+    fn setup_actions(&self) {
+
+    }
 }
